@@ -26,11 +26,29 @@
    characters other than '1's and '0's, truncate the string
    right before the spurious character (eg. truncate 110x001
    into 110); an empty string means zero. */
+int pot2 (int exp){
+   
+  float resultado = 1;
+  int i;
+  for ( i = 1; i < exp-1; i++){
+    resultado = resultado*2;    
+    }
+  return resultado;
+  }
+
 
 int decimal (char *b)
 {
-  
-  return 0;
+  int k =0;
+  int n;
+  int value = 0;
+  n = strlen(b);
+
+  for(int i=n-1; i>=0; i--){
+
+  value = value + (b[i]-'1'+1)*(pot2(n-i +1));
+  }
+  return value;
 }
 
 #define USAGE "m004 <string>\n"

@@ -28,7 +28,22 @@
 
 int wordcount (char *filename)
 {
-  return 0;
+  int i, result = 1;
+  int n;
+ FILE* fp = fopen(filename, "r");
+
+ while(n!=EOF) {
+ n = fgetc(fp);
+
+ if((n>64 && n<91)||(n>96 && n<123)){
+   while((n>64 && n<91)||(n>96 && n<123)){
+     n = fgetc(fp);
+   }
+ result++;
+ }
+ }
+ result--;
+  return result;
 }
 
 /* Do not edit function main. */

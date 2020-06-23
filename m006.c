@@ -1,3 +1,4 @@
+
 /* m006.c - Cross product.
 
    This program reads the coordinates of two 3-dimensional
@@ -28,6 +29,23 @@
 
 void crossprod (int a[3], int b[3], int c[3])
 {
+  int i ,u ,v;
+  for(i=0; i<3; i++){
+    
+    u = 1+i;
+    v = 2+i;
+    if(u==3)
+    u=0;
+    if(v==3)
+    v=0;
+    if(u==4)
+    u=1;
+    if(v==4)
+    v=1;
+
+    c[i] = a[u]*b[v] - a[v]*b[u];
+    
+  }
 }
 
 
