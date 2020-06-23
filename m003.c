@@ -24,6 +24,9 @@
 int is_prime (int a)
 {
   int res, i;
+  if(a==1)
+  return 0;
+  
   i = a;
   res = a;
   while( (i != 1) && (res !=0)){
