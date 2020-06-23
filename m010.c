@@ -77,7 +77,7 @@ int day_of_week (int day, int month)
     break;
     
     case 12:
-    dt = 355;
+    dt = 335;
     break;
   }
   dt = dt + day;
@@ -85,31 +85,31 @@ int day_of_week (int day, int month)
 
   switch(c){
     case 0:
-    dsem = thu;
-    break;
-    
-    case 1:
-    dsem = fri;
-    break;
-    
-    case 2:
-    dsem = sat;
-    break;
-    
-    case 3:
-    dsem = sun;
-    break;
-    
-    case 4:
-    dsem = mon;
-    break;
-    
-    case 5:
     dsem = tue;
     break;
     
-    case 6:
+    case 1:
     dsem = wed;
+    break;
+    
+    case 2:
+    dsem = thu;
+    break;
+    
+    case 3:
+    dsem = fri;
+    break;
+    
+    case 4:
+    dsem = sat;
+    break;
+    
+    case 5:
+    dsem = sun;
+    break;
+    
+    case 6:
+    dsem = mon;
     break;
 
   }
