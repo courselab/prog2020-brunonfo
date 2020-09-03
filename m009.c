@@ -23,8 +23,21 @@
 
 /* Sort the first 'n' integers values in 'vector'. */
 
-void sort (int* vector, int n)
+void sort (int *vector, int n)
 {
+  int aux, i, j;
+
+	for(j=n-1; j>=1; j--){
+
+		for(i=0; i<j; i++){
+
+			if(vector[i]>vector[i+1]){                             //Buble sort
+				aux=vector[i];
+        vector[i]=vector[i+1];
+        vector[i+1]=aux;
+            }
+        }
+    }
 }
 
 #define USAGE "m009 <num1> <nun2> ... \n"

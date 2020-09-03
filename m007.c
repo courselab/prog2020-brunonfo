@@ -28,7 +28,25 @@
 
 int lettercount (char *s)
 {
-  return 0;
+  int nletras, i;
+  i =0;
+  nletras=0;
+
+  do{
+    
+    if(s[i]!=' ' && s[i]!=0 && ((s[i]>64 && s[i]<91)||(s[i]>96 && s[i]<123)))
+    nletras++;
+    
+
+    i++;
+
+    if(s[i]== 0)
+      i =0;
+    
+  }while(i!=0);
+
+
+  return nletras;
 }
 
 

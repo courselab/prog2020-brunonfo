@@ -23,6 +23,21 @@
 
 int is_prime (int a)
 {
+  int res, i;
+  if(a==1)
+  return 0;
+  
+  i = a;
+  res = a;
+  while( (i != 1) && (res !=0)){
+
+    i--;
+    res = a % i;
+    
+  }
+  if(i==1)
+  return 1;
+  else
   return 0;
 }
 
